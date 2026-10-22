@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.4.1"
+  version: "0.5.0"
 
 package:
   name: maxwelllink
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/maxwelllink/maxwelllink-${{ version }}.tar.gz
-  sha256: d812bd479e05a07ad1da0dc1a4c988fd2e9947e9b1737fbf522ac554b4622fce
+  sha256: af5dc48ccb1f9ab29308631cbebf24b36b5893482dfff9170e0089044ce0105c
 
 build:
   noarch: python
@@ -52,6 +52,7 @@ tests:
       run:
         - python ${{ python_min }}.*
     script:
+      - python -c "from importlib.metadata import version; assert version('maxwelllink') == '${{ version }}'"
       - python -c "import numpy, requests, scipy"
       - cmake --version
       - mxl --help
