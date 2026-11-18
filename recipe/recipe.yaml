@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.5.0"
+  version: "0.6.0"
 
 package:
   name: maxwelllink
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/maxwelllink/maxwelllink-${{ version }}.tar.gz
-  sha256: af5dc48ccb1f9ab29308631cbebf24b36b5893482dfff9170e0089044ce0105c
+  sha256: 765204c77a609e49af618b35f010f19c8cc18e77b07daa7faa8dc2f4fffa4071
 
 build:
   noarch: python
